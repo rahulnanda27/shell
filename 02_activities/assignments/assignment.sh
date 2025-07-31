@@ -43,8 +43,12 @@ cd processed
 mkdir server_logs user_logs event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-unzip rawdata.zip /c/Users/Minal/DSI/day2/shell/02_activities/assignments/data/raw
+cd raw
 cd rawdata
+unzip rawdata.zip
+cp ./* /c/Users/Minal/DSI/day2/shell/02_activities/assignments/data/raw/
+cd ..
+ls ./*server*.log
 cp ./*server*.log /c/Users/Minal/DSI/day2/shell/02_activities/assignments/data/processed/server_logs/
 
 # 6. Repeat the above step for user logs and event logs
